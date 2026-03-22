@@ -1,0 +1,17 @@
+<form method="POST">
+
+{% for pos, list in candidates.items() %}
+<h3>{{pos}}</h3>
+{% for c in list %}
+<input type="radio" name="{{pos}}" value="{{c}}"> {{c}}<br>
+{% endfor %}
+{% endfor %}
+
+<h3>Rep1</h3>
+<input name="Rep1" required>
+
+<h3>Rep2</h3>
+<input name="Rep2" required>
+
+<button>Submit</button>
+</form>
